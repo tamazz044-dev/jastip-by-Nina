@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JastiPhone — Jastip iPhone</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://app.midtrans.com/snap/snap.js" data-client-key="GANTI_CLIENT_KEY"></script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" aria-label="Menu">☰</button>
+  <div class="logo">JastiPhone</div>
+  <div class="top-icons">⌕　🛍</div>
+</header>
+<div class="ticker">GRATIS ONGKIR • GARANSI RESMI • PRODUK PASTI 100% ORIGINAL • HASIL WAR FLASH SALE</div>
+
+<main>
+  <section class="hero">
+    <span class="pill dark-pill">🔥 FLASH SALE</span>
+    <h1>PRE-ORDER JASTIP 9.9</h1>
+    <p>Slot terbatas, jika produk stok habis berarti slot sudah full.</p>
+    <small>BERAKHIR DALAM</small>
+    <div class="countdown">
+      <div><b id="d">08</b><span>HARI</span></div>
+      <div><b id="h">09</b><span>JAM</span></div>
+      <div><b id="m">41</b><span>MENIT</span></div>
+      <div><b id="s">04</b><span>DETIK</span></div>
+    </div>
+    <button class="primary" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">⚡ Belanja Sekarang →</button>
+  </section>
+
+  <div class="section-label">JASTIP RESMI</div>
+  <h2>Apple iPhone</h2>
+  <p class="lead">Hasil war flash sale, harga terbaik. Pilih produk, isi data pengiriman, lalu bayar lewat checkout pembayaran.</p>
+
+  <div class="toolbar">
+    <button class="filter">☷　Filter</button>
+    <button class="filter">Urutkan　⌄</button>
+  </div>
+
+  <section id="products" class="grid"></section>
+</main>
+
+<button class="chat" onclick="alert('Hubungi admin melalui WhatsApp yang Anda pasang di pengaturan website.')">◯</button>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button class="close" onclick="closeCheckout()">×</button>
+    <h3>Konfirmasi Pesanan</h3>
+    <div id="selected"></div>
+    <form id="checkoutForm">
+      <input name="name" placeholder="Nama lengkap" required>
+      <input name="phone" placeholder="Nomor WhatsApp" required>
+      <textarea name="address" placeholder="Alamat lengkap pengiriman" required></textarea>
+      <input name="email" type="email" placeholder="Email (opsional)">
+      <button class="primary full" type="submit">Lanjut ke Pembayaran</button>
+    </form>
+    <p class="tiny">Pembayaran diproses oleh payment gateway. Jangan masukkan PIN/OTP bank ke website.</p>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
